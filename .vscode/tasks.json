@@ -1,0 +1,32 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Start WordPress database",
+			"type": "shell",
+			"command": "C:\\xampp\\mysql\\bin\\mysqld.exe",
+			"args": [
+				"--defaults-file=C:\\xampp\\mysql\\bin\\my.ini",
+				"--port=3307",
+				"--bind-address=127.0.0.1",
+				"--pid-file=C:\\xampp\\mysql\\data\\labtask1.pid",
+				"--console"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Run WordPress locally",
+			"type": "shell",
+			"command": "C:\\xampp\\php\\php.exe",
+			"args": [
+				"-S",
+				"127.0.0.1:8000",
+				"-t",
+				"${workspaceFolder}\\wordpress"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		}
+	]
+}
