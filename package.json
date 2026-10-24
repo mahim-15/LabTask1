@@ -1,0 +1,13 @@
+{
+  "name": "playverse",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "install-all": "npm install && cd client && npm install && cd ../server && npm install",
+    "dev": "concurrently \"npm run dev --prefix client\" \"npm run dev --prefix server\"",
+    "start": "npm run start --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
